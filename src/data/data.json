@@ -1,12 +1,13 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Nosy miavaka i Madagasikara",
+    "paragraph": " Ity sehatra iray ity dia natao ampahafantarana anao ireo teny faminaniana maro ao amin'ny  baiboly izay ho an'i Madagasikara sy ny mponina ao aminy, izany hoe ny vahoaka Malagasy. Ireo faminanian’ny baiboly momba azy ireo mantsy no mamaritra ny hoavy ara-toekarena , na ara-tsosialy, na ara-politika, na ara-panahy an’i Madagasikara sy ny vahoaka Malagasy.",
+    "backgroundcolor": "black"
   },
   "About": {
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "Why": [
-      "Lorem ipsum dolor",
+      "Lorem ipsum dolor", 
       "Tempor incididunt",
       "Lorem ipsum dolor",
       "Incididunt ut labore"
@@ -152,7 +153,7 @@
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
+    "address": "Antananarivo, 67ha Ankasina ",
     "phone": "+1 123 456 1234",
     "email": "info@company.com",
     "facebook": "fb.com",

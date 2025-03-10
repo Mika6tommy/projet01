@@ -3,28 +3,25 @@ import emailjs from "emailjs-com";
 import React from "react";
 
 const initialState = {
-  name: "",
-  email: "",
-  message: "",
+  from_name: "", // Match the variable in your EmailJS template
+  from_email: "", // Match the variable in your EmailJS template
+  message: "", // Match the variable in your EmailJS template
 };
+
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
+  const [{ from_name, from_email, message }, setState] = useState(initialState);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
+
   const clearState = () => setState({ ...initialState });
-  
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-    
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm("service_ppoz88e", "template_h87xqvi", e.target, "-KsZAAWCCKKN-mBNC")
       .then(
         (result) => {
           console.log(result.text);
@@ -35,6 +32,7 @@ export const Contact = (props) => {
         }
       );
   };
+
   return (
     <div>
       <div id="contact">
@@ -55,10 +53,11 @@ export const Contact = (props) => {
                       <input
                         type="text"
                         id="name"
-                        name="name"
+                        name="from_name" // Match the variable in your EmailJS template
                         className="form-control"
                         placeholder="Name"
                         required
+                        value={from_name}
                         onChange={handleChange}
                       />
                       <p className="help-block text-danger"></p>
@@ -69,10 +68,11 @@ export const Contact = (props) => {
                       <input
                         type="email"
                         id="email"
-                        name="email"
+                        name="from_email" // Match the variable in your EmailJS template
                         className="form-control"
                         placeholder="Email"
                         required
+                        value={from_email}
                         onChange={handleChange}
                       />
                       <p className="help-block text-danger"></p>
@@ -81,12 +81,13 @@ export const Contact = (props) => {
                 </div>
                 <div className="form-group">
                   <textarea
-                    name="message"
+                    name="message" // Match the variable in your EmailJS template
                     id="message"
                     className="form-control"
                     rows="4"
                     placeholder="Message"
                     required
+                    value={message}
                     onChange={handleChange}
                   ></textarea>
                   <p className="help-block text-danger"></p>
@@ -106,6 +107,7 @@ export const Contact = (props) => {
                   <i className="fa fa-map-marker"></i> Address
                 </span>
                 {props.data ? props.data.address : "loading"}
+              <a href="https://maps.app.goo.gl/dqqxgUyyxpeXYtyY7">maps</a>  
               </p>
             </div>
             <div className="contact-item">
@@ -113,7 +115,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-phone"></i> Phone
                 </span>{" "}
-                {props.data ? props.data.phone : "loading"}
+                {props.data ? props.data.phone : "loadingg"}
               </p>
             </div>
             <div className="contact-item">
@@ -153,9 +155,9 @@ export const Contact = (props) => {
       <div id="footer">
         <div className="container text-center">
           <p>
-            &copy; 2023 Issaaf Kattan React Land Page Template. Design by{" "}
-            <a href="http://www.templatewire.com" rel="nofollow">
-              TemplateWire
+            &copy; 2025 Site web de Madagasikara Nosy miavaka. Design by{" "}
+            <a href="http://mikatommy.vercel.app" rel="nofollow">
+              Tommy has
             </a>
           </p>
         </div>
